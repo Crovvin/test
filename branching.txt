@@ -1,0 +1,25 @@
+Part I
+
+1. git checkout -b
+2. A fast foward can only occur if there are no commits on the original branch
+3. git checkout
+4. git branch -D
+5. Merge conflicts happeen when changes are committed to the same file from two different branches
+
+Part II
+
+mkdir merges
+cd merges
+git init
+echo a_text > a.txt
+git add a.txt
+git commit -m "first commit"
+git checkout -b new_branch
+echo b_text > b.txt
+git add b.txt
+git commit -m "second commit"
+git checkout master
+echo c_txt > b.txt
+git add .
+git commit -m "third commit"
+git merge new_branch
